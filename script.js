@@ -9,20 +9,6 @@ document.querySelector('.header__menu').addEventListener('click', function (e) {
   }
 });
 
-// const acc = document.getElementsByClassName('accordion');
-
-// for (let i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener('click', function () {
-//     this.classList.toggle('active');
-//     let panel = this.nextElementSibling;
-//     if (panel.style.maxHeight) {
-//       panel.style.maxHeight = null;
-//     } else {
-//       panel.style.maxHeight = panel.scrollHeight + 'px';
-//     }
-//   });
-// }
-
 // accordion component
 // const section = document.querySelector('.section_2');
 // const accordion = document.querySelectorAll('.accordion');
@@ -32,6 +18,7 @@ document.querySelectorAll('.accordion').forEach(a =>
   a.addEventListener('click', function (e) {
     this.classList.toggle('active');
     let panel = this.nextElementSibling;
+
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
@@ -39,6 +26,29 @@ document.querySelectorAll('.accordion').forEach(a =>
     }
   })
 );
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+// const accordion = document.querySelectorAll('.accordion');
+// const panel = document.querySelectorAll('.panel');
+
+// accordion.forEach(
+//   a =>
+//     (a.addEventListener('click', function (e) {
+//       let stClasses = !this.classList.contains('active');
+//       setClass(accordion, 'active', 'remove');
+//       setClass(panel, 'show', 'remove');
+
+//       if (setClasses) {
+//         this.classList.toggle('active');
+//         this.nextElementSibling.classList.toggle('show');
+//       }
+
+//       function setClass(els, className, fnName) {
+//         els.forEach(e => e.classList[fnName](className));
+//       }
+//     })
+// );
 
 // accordion.forEach(a =>
 //   a.addEventListener('click', function (e) {

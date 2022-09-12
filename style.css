@@ -222,9 +222,9 @@ body {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
 .panel--active {
   overflow: visible;
-  /* transform: translateY(-66%); */
 }
 .panel:active {
   max-height: 1600px;
