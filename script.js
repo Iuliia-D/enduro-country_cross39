@@ -10,10 +10,6 @@ document.querySelector('.header__menu').addEventListener('click', function (e) {
 });
 
 // accordion component
-// const section = document.querySelector('.section_2');
-// const accordion = document.querySelectorAll('.accordion');
-// const accordionContent = document.querySelectorAll('.panel');
-
 document.querySelectorAll('.accordion').forEach(a =>
   a.addEventListener('click', function (e) {
     this.classList.toggle('active');

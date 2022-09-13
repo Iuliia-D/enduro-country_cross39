@@ -100,8 +100,8 @@ body {
   font-size: 18px;
 }
 
-.header__menu li button:hover {
-  border-bottom: 2px solid #fff;
+.header__menu--btn:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(11 29 38));
   font-weight: normal;
 }
 .header__menu--btn {
@@ -163,6 +163,9 @@ body {
   width: 720px;
   height: 231px;
   padding: 0;
+}
+.accordion:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(255 255 255));
 }
 .Number {
   font-size: 180px;
