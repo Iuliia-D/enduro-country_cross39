@@ -23,50 +23,41 @@ document.querySelectorAll('.accordion').forEach(a =>
   })
 );
 
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-// const accordion = document.querySelectorAll('.accordion');
-// const panel = document.querySelectorAll('.panel');
+// Menu fade animation
+const menu = document.querySelector('.header__menu');
 
-// accordion.forEach(
-//   a =>
-//     (a.addEventListener('click', function (e) {
-//       let stClasses = !this.classList.contains('active');
-//       setClass(accordion, 'active', 'remove');
-//       setClass(panel, 'show', 'remove');
+const handlerHoverMenu = function (e) {
+  if (e.target.classList.contains('header__menu--btn')) {
+    const link = e.target;
+    const siblings = link
+      .closest('.header__menu')
+      .querySelectorAll('.header__menu--btn');
 
-//       if (setClasses) {
-//         this.classList.toggle('active');
-//         this.nextElementSibling.classList.toggle('show');
-//       }
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+  }
+};
+menu.addEventListener('mouseover', handlerHoverMenu.bind(0.5));
+menu.addEventListener('mouseout', handlerHoverMenu.bind(1));
 
-//       function setClass(els, className, fnName) {
-//         els.forEach(e => e.classList[fnName](className));
-//       }
-//     })
-// );
+// Social fade animation
+const social = document.querySelector('.section1__Social');
+console.log(social);
 
-// accordion.forEach(a =>
-//   a.addEventListener('click', function (e) {
-//     console.log('TAB');
-//     const cliked = e.target.closest('.accordion');
-//     document
-//       .querySelector(`.info__card_more_${cliked.dataset.tab}`)
-//       .classList.toggle('panel--active');
-//     console.log(cliked.dataset.tab);
-//     // accordionContent.toggle('panel--active');
-//   })
-// );
+const handlerHoverSocial = function (e) {
+  if (e.target.classList.contains('section1__Social--btn')) {
+    const link = e.target;
+    console.log(link);
+    const siblings = link
+      .closest('.section1__Social')
+      .querySelectorAll('.section1__Social--btn');
 
-// section.addEventListener('click', function (e) {
-//   const cliked = e.target.closest('.accordion');
-//   console.log(cliked);
-
-//   if (!cliked) return;
-
-//   accordionContent.forEach(c => c.classList.remove('.panel--active'));
-//   console.log(cliked.dataset.tab);
-//   document
-//     .querySelector(`.info__card_more_${cliked.dataset.tab}`)
-//     .classList.add('.panel--active');
-// });
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+    console.log(this);
+  }
+};
+social.addEventListener('mouseover', handlerHoverSocial.bind(0.5));
+social.addEventListener('mouseout', handlerHoverSocial.bind(1));

@@ -102,7 +102,6 @@ body {
 
 .header__menu--btn:hover {
   filter: drop-shadow(0 0 0.75rem rgb(11 29 38));
-  font-weight: normal;
 }
 .header__menu--btn {
   padding: 0;
